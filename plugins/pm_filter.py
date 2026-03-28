@@ -1302,10 +1302,10 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            temp_msg = await message.reply(f'🔎 Searching for "{search}"...')
+            temp_msg = await message.reply(f'🔎 ꜱᴇᴀʀᴄʜɪɴɢ ꜰᴏʀ "{search}"...')
             files, offset, total_results = await get_search_results(message.chat.id ,search.lower(), offset=0, filter=True)
             if not files:
-                try: await temp_msg.edit_text('⚠️ Something is wrong...')
+                try: await temp_msg.edit_text('⚠️ ꜱᴏᴍᴇᴛʜɪɴɢ ɪꜱ ᴡʀᴏɴɢ...')
                 except: pass
                 try: await temp_msg.delete()
                 except: pass
@@ -1320,7 +1320,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-    try: await temp_msg.edit_text('🍳 Cooking your relevant files...')
+    try: await temp_msg.edit_text('🍳 ᴄᴏᴏᴋɪɴɢ ʏᴏᴜʀ ꜰɪʟᴇꜱ...')
     except: pass
     settings = await get_settings(message.chat.id)
     if 'is_shortlink' in settings.keys():
@@ -1483,7 +1483,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         cap = f"<b><i> Hey {message.from_user.mention},❗Your Search Results</b> ‛{search}’👇🏻 </i>"
-    try: await temp_msg.edit_text('✅ Getting Ready...')
+    try: await temp_msg.edit_text('✅ ɢᴇᴛᴛɪɴɢ ʀᴇᴀᴅʏ...')
     except: pass
     try: await temp_msg.delete()
     except: pass

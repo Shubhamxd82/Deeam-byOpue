@@ -925,7 +925,7 @@ async def verify_channel_membership(update: Update, context: ContextTypes.DEFAUL
 
 def main():
     # 🚨 REMINDER: Replace with your actual bot token when running in production.
-    BOT_TOKEN = "8223948092:AAHWrgUTTMb4OC6gB8X77y260Ue8uAuQTaA"
+    BOT_TOKEN = "8670961788:AAEFWwy-kPDdscQnYfNHcbFDGH5QpEUZjok"
 
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
